@@ -1,0 +1,50 @@
+body{
+    background-color: #6f6afb;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    font-family: 'Lobster', sans-serif;
+}
+h1{
+    font-size: 4rem;
+    font-family: 'Lobster', sans-serif;
+    text-align: center;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    0%{
+      text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                   0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+    }
+    100% {
+      text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 
+                   0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+.grid{
+    background-image: url(boards.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.75rem;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+.box{
+    cursor: pointer;
+    font-size: 3rem;
+    font-family: 'Shizuru';
+    font-weight: 900;
+}
+.glow{
+    border: 6px #39ff14 solid;
+}
