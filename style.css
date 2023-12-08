@@ -48,3 +48,7 @@ h1{
 .glow{
     border: 6px #39ff14 solid;
 }
+span{
+    font-weight: 700;
+    cursor: pointer;
+}

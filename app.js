@@ -8,6 +8,23 @@ let b7 = document.querySelector("#b31");
 let b8 = document.querySelector("#b32");
 let b9 = document.querySelector("#b33");
 let info = document.querySelector(".info");
+let restart = document.querySelector("span");
+restart.addEventListener("click",()=>{
+    if(game_over==true)
+    {
+        game_over = false;
+        for(let i=0;i<3;i++)
+        {
+            for(let j=0;j<3;j++)
+            {
+                document.querySelector(`#b${i+1}${j+1}`).innerHTML = "";
+                document.querySelector(`#b${i+1}${j+1}`).classList.remove("glow");
+                A[i][j] = 0;
+                c=0;
+            }
+        }
+    }
+});
 let c=0;
 let game_over = false;
 let A = [[0,0,0],[0,0,0],[0,0,0]];
@@ -228,5 +245,7 @@ function win(a)
     else if(a==-1)
         info.innerHTML = "O WINS !!!";
     else 
-    info.innerHTML = "CAT'S GAME !!!";
+        info.innerHTML = "CAT'S GAME !!!";
+
+
 }
